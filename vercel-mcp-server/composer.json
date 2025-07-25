@@ -1,5 +1,5 @@
 {
-    "name": "vercel-mcp-server",
+    "name": "vercel/mcp-server",
     "description": "PHP MCP Server deployed on Vercel",
     "type": "project",
     "require": {
