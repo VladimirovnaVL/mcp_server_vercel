@@ -1,0 +1,21 @@
+{
+    "functions": {
+        "api/mcp.php": {
+            "runtime": "vercel-php@0.6.0"
+        }
+    },
+    "routes": [
+        {
+            "src": "/api/mcp",
+            "dest": "/api/mcp.php"
+        },
+        {
+            "src": "/api/mcp/(.*)",
+            "dest": "/api/mcp.php"
+        }
+    ],
+    "env": {
+        "MCP_ENV": "production",
+        "MCP_LOG_LEVEL": "info"
+    }
+} 

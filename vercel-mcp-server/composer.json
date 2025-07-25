@@ -1,0 +1,32 @@
+{
+    "name": "vercel-mcp-server",
+    "description": "PHP MCP Server deployed on Vercel",
+    "type": "project",
+    "require": {
+        "php": ">=8.1",
+        "php-mcp/server": "^3.3.0",
+        "php-mcp/schema": "^1.0",
+        "opis/json-schema": "^2.4",
+        "phpdocumentor/reflection-docblock": "^5.6",
+        "psr/clock": "^1.0",
+        "psr/container": "^2.0",
+        "psr/log": "^3.0",
+        "psr/simple-cache": "^3.0",
+        "react/event-loop": "^1.5",
+        "react/http": "^1.11",
+        "react/promise": "^3.0",
+        "react/stream": "^1.4",
+        "symfony/finder": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "VercelMcp\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+} 
