@@ -502,5 +502,12 @@ return function (array $event): array {
     $headers = $event['headers'] ?? [];
     $body = $event['body'] ?? null;
     
-    return $handler->handleRequest($method, $path, $headers, $body);
+    $result = $handler->handleRequest($method, $path, $headers, $body);
+    
+    // Ensure proper response format for Vercel
+    return [
+        'statusCode' => $result['statusCode'] ?? 200,
+        'headers' => $result['headers'] ?? ['Content-Type' => 'application/json'],
+        'body' => $result['body'] ?? json_encode(['error' => 'No response body'])
+    ];
 }; 

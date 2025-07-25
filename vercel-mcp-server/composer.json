@@ -23,6 +23,9 @@
             "VercelMcp\\": "src/"
         }
     },
+    "scripts": {
+        "vercel-build": "composer install --no-dev --optimize-autoloader"
+    },
     "config": {
         "sort-packages": true,
         "optimize-autoloader": true
